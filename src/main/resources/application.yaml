@@ -1,0 +1,28 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: unbrella
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/unbrella
+    username: postgres
+    password: "1234"
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop #update quando si implementera gl'aggiornamenti
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+# Mantenuto il tuo limitatore di rate...
+resilience4j.ratelimiter:
+  instances:
+    gateRateLimiter:
+      limitForPeriod: 3
+      limitRefreshPeriod: 1m
+      timeoutDuration: 0s

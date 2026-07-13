@@ -1,0 +1,16 @@
+services:
+  postgres-db:
+    image: postgres:15-alpine
+    container_name: unbrella-postgres
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_DB: unbrella
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: "1234"
+    networks:
+      - unbrella-network
+
+networks:
+  unbrella-network:
+    driver: bridge
