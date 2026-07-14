@@ -22,6 +22,7 @@ public class BagnoController {
     @Autowired
     private BagnoService bagnoService;
 
+
     /**
      * Endpoint: GET http://localhost:8090/api/bagni
      * Restituisce la lista completa di tutti i bagni registrati (usata da React per popolare la tendina)
@@ -55,4 +56,5 @@ public class BagnoController {
     public Bagno createBagno(@RequestBody Bagno bagno) {
         return bagnoService.saveBagno(bagno);
     }
+
 }
