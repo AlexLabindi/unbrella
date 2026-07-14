@@ -1,7 +1,17 @@
+/* Inietta l'intero framework Tailwind CSS v4 nel progetto.
+   Sostituisce i vecchi tre @tailwind (base, components, utilities) delle versioni precedenti. */
 @import "tailwindcss";
 
+/* Stili globali applicati al body della pagina */
 body {
-  background: linear-gradient(to bottom, #f0f9ff, #e0f2fe);
+  /* Crea uno sfondo sfumato dall'alto verso il basso (to bottom).
+     Usa i codici colore esadecimali per dare l'effetto "cielo/mare sfumato". */
+  background: linear-gradient(to bottom, #f0f9ff, #169ef8);
+
+  /* Forza la pagina ad occupare almeno il 100% dell'altezza dello schermo (Viewport Height),
+     altrimenti lo sfondo sfumato si taglierebbe a metà schermo se ci sono pochi elementi. */
   min-height: 100vh;
+
+  /* Imposta il font principale dell'applicazione (Inter è un font sans-serif molto moderno) */
   font-family: 'Inter', sans-serif;
 }
