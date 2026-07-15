@@ -65,7 +65,7 @@ public class OmbrelloneService {
             ombrelloneRepository.save(omb);
         }
     });
-
+//
     // 3. Ritorniamo l'ombrellone aggiornato cercandolo nuovamente,
     // oppure null se non è stato trovato o non è stato possibile prenotarlo
     return ombrelloneRepository.findById(idOmbrellone).orElse(null);
