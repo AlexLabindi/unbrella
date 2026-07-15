@@ -27,29 +27,7 @@ public class OmbrelloneService {
         return ombrelloneRepository.findById(id);
     }
 
-    public Ombrellone prenotaOmbrellone(Long idOmbrellone) {
-        // 1. Cerchiamo l'ombrellone nel database tramite ID
-        Optional<Ombrellone> optionalOmbrellone = ombrelloneRepository.findById(idOmbrellone);
 
-        // 2. Verifichiamo se l'oggetto è presente nel contenitore Optional
-        if (optionalOmbrellone.isPresent()) {
-
-            // Estraiamo l'oggetto reale usando .get()
-            Ombrellone omb = optionalOmbrellone.get();
-            if (omb.getP() == false || omb.getP() == null) {
-
-                // Modifichiamo il campo booleano 'p' impostandolo a true (prenotato)
-                omb.setP(true);
-
-                // Salviamo l'entità aggiornata nel database e la restituiamo
-                return ombrelloneRepository.save(omb);
-            }
-
-        }
-            // 3. Gestione del caso in cui l'ID non esista (restituiamo null o lanciamo un'eccezione)
-            return ombrelloneRepository.findById(idOmbrellone).orElse(null);
-        }
-        /*
         public Ombrellone prenotaOmbrellone(Long idOmbrellone) {
         // 1. Cerchiamo l'ombrellone nel database tramite ID
     Optional<Ombrellone> optionalOmbrellone = ombrelloneRepository.findById(idOmbrellone);
@@ -69,6 +47,6 @@ public class OmbrelloneService {
     // 3. Ritorniamo l'ombrellone aggiornato cercandolo nuovamente,
     // oppure null se non è stato trovato o non è stato possibile prenotarlo
     return ombrelloneRepository.findById(idOmbrellone).orElse(null);
-}*/
+}
     }
 

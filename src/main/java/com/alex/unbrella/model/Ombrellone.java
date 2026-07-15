@@ -14,5 +14,5 @@ public class Ombrellone {
 
     private Integer n; // Numero identificativo dell'ombrellone
     private char l;    // Lettera che identifica la fila (es. 'A', 'B')
-    private Boolean p;// se attivo prenotato
+    private Boolean p = false;// se attivo prenotato
 }
