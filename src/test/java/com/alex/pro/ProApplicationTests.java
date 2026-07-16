@@ -1,10 +1,10 @@
-package com.alex.unbrella;
+package com.alex.pro;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class UnbrellaApplicationTests {
+class ProApplicationTests {
 
     @Test
     void contextLoads() {
